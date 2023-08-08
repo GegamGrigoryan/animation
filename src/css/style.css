@@ -1,0 +1,264 @@
+body {
+    background-color: #ffbb8a;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 80%;
+    height: 500px;
+
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* justify-content:center; */
+    border: 1px solid white;
+    margin: 50px auto;
+    position: relative;
+}
+
+.collapse-wrp {
+    width: 50%;
+    min-height: 100px;
+    background-color: #deaa88;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    padding: 10px;
+}
+
+.collapse-btn {
+    width: 100px;
+    height: 30px;
+    background-color: #ba8e63;
+    margin-bottom: 10px;
+}
+
+.collapse-btn:hover {
+    outline: 1px solid #000;
+    outline-offset: 1px;
+    cursor: pointer;
+}
+
+.text-block {
+    display: none;
+}
+
+.hide {
+    width: 100%;
+    height: 100px;
+    box-sizing: border-box;
+    background-color: #ffbb8a;
+    border: 2px solid #c67338;
+    padding: 5px;
+    display: block;
+    animation-name: hideText;
+    animation-duration: 1s;
+    transform-origin: top;
+    cursor: default;
+}
+
+.dialog-vig-wrp {
+    /* width: 100px;
+    height: 100px; */
+
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.viget {
+    width: 200px;
+    height: 250px;
+    border: 2px solid white;
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 5px;
+    display: none;
+}
+
+.close {
+    width: 40px;
+    height: 40px;
+    background-image: url("https://img.icons8.com/emoji/40/cross-mark-button-emoji.png");
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+
+textarea {
+    width: 90%;
+    height: 120px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+button {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.dialog-img {
+    width: 60px;
+    height: 60px;
+
+    background-image: url("https://img.icons8.com/flat-round/60/filled-chat.png");
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.dialog-img:hover {
+    transform-origin: center;
+    transform: scale(1.2);
+}
+
+.hide-dialog {
+    display: block;
+    animation-name: openChat;
+
+    animation-duration: 100ms;
+    animation-timing-function: linear;
+    transform-origin: right bottom;
+}
+
+.like-container {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    margin: auto auto;
+    cursor: pointer;
+    color: bisque;
+    font-weight: 700;
+    position: relative;
+    user-select: none;
+
+}
+
+.heart {
+    width: 50px;
+    height: 50px;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url("https://img.icons8.com/fluency/48/like.png");
+    margin: auto auto;
+
+    transform-origin: center;
+}
+
+.right-liker {
+    animation: right 0.5s linear forwards;
+}
+
+.left-liker {
+    animation: left 0.5s linear forwards;
+}
+
+.straight {
+    animation: straight 0.5s linear forwards;
+}
+
+
+@keyframes right {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translate(25%, -70px);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translate(70%, -120px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0%, -200px);
+
+    }
+}
+
+@keyframes left {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translate(-25%, -70px);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translate(-70%, -120px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0%, -200px);
+    }
+}
+
+@keyframes straight {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translate(0%, -70px);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translate(0%, -120px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0%, -200px);
+    }
+}
+
+@keyframes hideText {
+    0% {
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes openChat {
+    0% {
+        transform: scaleZ(0);
+    }
+
+    50% {
+        transform: scaleZ(0.5);
+    }
+
+    100% {
+        transform: scaleZ(1);
+    }
+}
